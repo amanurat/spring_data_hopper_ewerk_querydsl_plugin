@@ -1,6 +1,6 @@
 ### Spring-Data-Hopper RC1
 
-Currently Spring Data Hopper is RC, testing with local build of com.ewerk.gradle.plugins:querydsl-plugin
+Currently [Spring Data](http://projects.spring.io/spring-data/#quick-start) Hopper is RC1, testing with local build of com.ewerk.gradle.plugins:querydsl-plugin
 
 querydsl 4.x update
 
