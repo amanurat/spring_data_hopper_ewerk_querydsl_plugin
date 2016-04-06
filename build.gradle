@@ -1,0 +1,51 @@
+buildscript {
+  repositories {
+    mavenLocal()
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+
+  dependencies {
+    classpath("io.spring.gradle:dependency-management-plugin:$dependency_management_plugin_ver",
+            "com.ewerk.gradle.plugins:querydsl-plugin:$ewerk_querydsl_plugin_ver")
+  }
+}
+
+apply plugin: "java"
+apply plugin: "io.spring.dependency-management"
+apply plugin: "com.ewerk.gradle.plugins.querydsl"
+
+dependencyManagement {
+  imports {
+    mavenBom "org.springframework.data:spring-data-releasetrain:$spring_data_releasetrain_ver"
+  }
+}
+
+repositories {
+  maven {
+    url 'https://repo.spring.io/libs-milestone'
+  }
+}
+
+dependencies {
+  compile("org.springframework.data:spring-data-jpa",
+          "org.springframework.data:spring-data-mongodb",
+          "com.querydsl:querydsl-mongodb:$querydsl_ver",
+          "org.eclipse.persistence:eclipselink:$eclipselink_ver")
+
+  testCompile("org.testng:testng:$testng_ver")
+}
+
+querydsl {
+  library "com.querydsl:querydsl-apt:$querydsl_ver"
+  querydslSourcesDir = "src/querydsl/java"
+  jpa = true
+  springDataMongo = true
+}
+
+test {
+  useTestNG()
+  minHeapSize = "128m"
+  maxHeapSize = "128m"
+}
