@@ -15,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QAnyJPAEntity extends EntityPathBase<AnyJPAEntity> {
 
-    private static final long serialVersionUID = -133496269L;
+    private static final long serialVersionUID = -1182838964L;
 
     public static final QAnyJPAEntity anyJPAEntity = new QAnyJPAEntity("anyJPAEntity");
 

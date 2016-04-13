@@ -16,7 +16,7 @@ import com.querydsl.core.types.dsl.PathInits;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QAnyMongoDocument extends EntityPathBase<AnyMongoDocument> {
 
-    private static final long serialVersionUID = -1410139580L;
+    private static final long serialVersionUID = -774303011L;
 
     private static final PathInits INITS = PathInits.DIRECT2;
 
