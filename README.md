@@ -9,7 +9,7 @@ querydsl 4.x update
 #### Testing
 
 ~~~
-org.springframework.data:spring-data-releasetrain:Hopper-RC1
+org.springframework.data:spring-data-releasetrain:Hopper-SR1
 com.ewerk.gradle.plugins:querydsl-plugin:1.0.6-SNAPSHOT
 ~~~
 
